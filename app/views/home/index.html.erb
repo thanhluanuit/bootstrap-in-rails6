@@ -1,0 +1,63 @@
+<div class="container">
+  <h1 class="text-center">How to use Bootstrap in Rails 6</h1>
+
+  <p class="font-weight-bold">
+    Step 1: Install Bootstrap
+  </p>
+  <code>
+    > yarn add bootstrap
+  </code>
+  <br><br>
+
+  <p class="font-weight-bold">
+    Step 2: Install Bootstrap dependencies: jQuery and popper.js
+  </p>
+  <code>
+    > yarn add jquery popper.js
+  </code>
+  <br><br>
+
+  <p class="font-weight-bold">
+    Step 3: Import JavaScript Bootstrap and dependencies
+  </p>
+  <pre>
+    # app/javascript/packs/application.js
+    import "jquery";
+    import "popper.js";
+    import "bootstrap";
+  </pre>
+
+  <p class="font-weight-bold">
+    Step 4: Import CSS Bootstrap
+  </p>
+  <div>
+    <p>
+      Add a folder name stylesheets in app/javascript/
+    </p>
+    <p>
+      Add application.scss file in app/javascript/stylesheets
+    </p>
+    <p>
+      Add below code to import bootstrap css:
+    </p>
+    <pre>
+      # app/javascript/stylesheets/application.scss
+      @import "~bootstrap/scss/bootstrap";
+    </pre>
+    <p>
+      Import CSS to application.js
+    </p>
+    <pre>
+      # app/javascript/packs/application.js
+      import "../stylesheets/application"
+    </pre>
+
+    <p class="font-weight-bold"> See folder structure </p>
+    <%= image_tag "folder-structure.png", width: "300px" %>
+    <br>
+    <br>
+    <h3>DONE!</h3>
+  </div>
+  <br>
+  <br>
+</div>

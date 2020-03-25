@@ -1,24 +1,52 @@
-# README
+## How to use Bootstrap in Rails 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Step 1: Install Bootstrap
+```
+yarn add bootstrap
+```
 
-Things you may want to cover:
+#### Step 2: Install Bootstrap dependencies: jQuery and popper.js
 
-* Ruby version
+```
+yarn add jquery popper.js
+``` 
 
-* System dependencies
+#### Step 3: Import JavaScript Bootstrap and dependencies
+```
+# app/javascript/packs/application.js
+import "jquery";
+import "popper.js";
+import "bootstrap";
+```
 
-* Configuration
+#### Step 4: Import CSS Bootstrap
+Add a folder name stylesheets in app/javascript/
 
-* Database creation
+Add application.scss file in app/javascript/stylesheets
 
-* Database initialization
+Add below code to import bootstrap css:
 
-* How to run the test suite
+```
+# In app/javascript/stylesheets/application.scss
+@import "~bootstrap/scss/bootstrap"; 
+```
+    
+Import CSS to application.js
+```
+# In app/javascript/packs/application.js
+import "../stylesheets/application" 
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### DONE!
 
-* Deployment instructions
+#### See folder structure
+```cassandraql
 
-* ...
+app/javascript
+├── channels
+├── packs
+│   └── application.js
+└── stylesheets
+    └── application.scss
+
+```
