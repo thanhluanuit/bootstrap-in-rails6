@@ -50,3 +50,6 @@ app/javascript
     └── application.scss
 
 ```
+
+More details in Luanotes.com: https://luanotes.com/blogs/using-bootstrap-with-webpacker-in-rails-6
+
